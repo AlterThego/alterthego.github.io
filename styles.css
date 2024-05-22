@@ -93,7 +93,8 @@ header .header-aug.scrolled {
     --aug-border-right: 1px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px),
+(max-width: 640px) {
     header .header-aug.scrolled {
         background-color: transparent;
         --aug-border-bg: transparent;
