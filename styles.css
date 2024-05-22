@@ -93,17 +93,8 @@ header .header-aug.scrolled {
     --aug-border-right: 1px;
 }
 
-@media (max-width: 768px),
-(max-width: 640px) {
-    header .header-aug.scrolled {
-        background-color: transparent;
-        --aug-border-bg: transparent;
-        --aug-border-top: 0px;
-        --aug-border-bottom: 0px;
-        --aug-border-left: 0px;
-        --aug-border-right: 0px;
-    }
-}
+
+
 
 li.education-aug {
     --aug-border-bg: var(--secondary-yellow);
@@ -534,4 +525,37 @@ p.cyberpunk:before,
 
 *::-webkit-scrollbar-thumb:hover {
     background-color: var(--primary-yellow);
+}
+
+@media (max-width: 576px) {
+    header .header-aug.scrolled {
+        background-color: transparent;
+        --aug-border-bg: transparent;
+        --aug-border-top: 0px;
+        --aug-border-bottom: 0px;
+        --aug-border-left: 0px;
+        --aug-border-right: 0px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    header .header-aug.scrolled {
+        background-color: transparent;
+        --aug-border-bg: transparent;
+        --aug-border-top: 0px;
+        --aug-border-bottom: 0px;
+        --aug-border-left: 0px;
+        --aug-border-right: 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    header .header-aug.scrolled {
+        background-color: transparent;
+        --aug-border-bg: transparent;
+        --aug-border-top: 0px;
+        --aug-border-bottom: 0px;
+        --aug-border-left: 0px;
+        --aug-border-right: 0px;
+    }
 }
