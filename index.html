@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <meta name="description" content="A portfolio showcasing my work and projects.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="assets/css/section-3-style.css">
+    <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/section-3-style.css" as="style" onload="this.rel='stylesheet'">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=
         Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mbt4tna.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
 
     <!-- Frameworks -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,17 +26,15 @@
     <script src="https://kit.fontawesome.com/b9a49ab50b.js" crossorigin="anonymous"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+
 </head>
 
 <body>
 
     <header class="text-white">
-        <nav class="header-aug py-3 mx-10" data-augmented-ui="br-clip tl-clip border">
+        <nav class="header-aug py-3 mx-0 lg:mx-10" data-augmented-ui="br-clip tl-clip border">
             <ul class="grid grid-cols-4 text-center">
-                <li class="col-span-1 py-3">
+                <li class="hidden lg:block col-span-1 py-3">
                     <div class="hidden lg:block time-container">
                         <a href="#" class="hover:text-cyan-400">
                             <div id="current-time" class="time"></div>
@@ -41,13 +44,13 @@
                 </li>
 
 
-                <div class="col-span-2 flex justify-center items-center">
+                <div class="col-span-4 lg:col-span-2 flex justify-center items-center">
                     <div class="grid grid-cols-5">
                         <a class="col-span-1" href="#section-about">
                             <li id="section-about-link"
                                 class="about-aug bg-gray-950 bg-opacity-40 py-3 hover:bg-[#396573] hover:text-cyan-400 hover:border-cyan-400 transition duration-300 ease-in-out"
                                 data-augmented-ui="tl-clip border">
-                                <i class="block sm:hidden px-2 fa-solid fa-user"></i>
+                                <i class="block sm:hidden px-12 fa-solid fa-user"></i>
                                 <p class="hidden sm:block">About</p>
                             </li>
                         </a>
@@ -105,7 +108,7 @@
 
     <main class="container m-auto">
         <div id="overview">
-            <section class="main-top grid grid-cols-1 lg:grid-cols-3 h-auto lg:h-screen mt-14">
+            <section class="main-top grid grid-cols-1 lg:grid-cols-3 h-auto lg:h-screen mt-10 lg:mt-14">
                 <!-- First Section - About Me -->
                 <div class="col-span-3 lg:col-span-1 p-8 text-center lg:text-left space-y-5">
                     <h2 class="main-aug text-xl text-[--primary-cyan] bg-red-500 bg-opacity-10 px-10 py-2.5"
@@ -174,8 +177,7 @@
                         data-augmented-ui="br-clip bl-clip border">
                         Avatar
                     </h2>
-                    <div class="custom-model-viewer" data-augmented-ui="
-                        tl-clip-x tr-clip-x br-clip-y bl-clip-y both">
+                    <div class="custom-model-viewer" data-augmented-ui="tr-2-clip-y br-clip bl-2-rect-y both">
                         <model-viewer class="w-full h-[70vh;]"
                             src="https://models.readyplayer.me/664c89ff89cfe2d699c21c84.glb" seamless-poster
                             environment-image="neutral" shadow-intensity="1" autoplay ar
@@ -188,82 +190,90 @@
                 <div class="col-span-3 lg:col-span-1 p-8 text-center lg:text-right">
                     <section>
                         <h2 class="main-aug bg-red-500 bg-opacity-10 text-[--primary-cyan] text-xl mb-4 px-10 py-2.5"
-                            data-augmented-ui="
-                            tl-2-clip-x br-clip border">
-                            Contact Information
+                            data-augmented-ui="tl-2-clip-x br-clip border">Contact Information
                         </h2>
                         <p class="border-[--primary-yellow] border-b-4 mb-5"></p>
                     </section>
 
-                    <div class="section-3 text-white">
-                        <div class="wrapper crt py-4 px-2">
-                            <div class="quote ui-box">
-                                <span class="flex flex-inline justify-between">
-                                    <p style="text-align: left;">Identity Code:</p>
-                                    <p style="text-align: right;">PLR-7H8J-K4L5-N2M9</p>
-                                </span>
+                    <div class="main-contact w-full flex flex-col" data-augmented-ui="tr-clip bl-clip-y br-clip border">
+                        <div class="main-contact section-3 text-white" data-augmented-ui="tr-clip border">
+                            <div class="wrapper crt py-4 px-3">
+                                <div class="quote ui-box">
+                                    <span class="flex flex-inline justify-between">
+                                        <p style="text-align: left;">Identity Code:</p>
+                                        <p style="text-align: right;">PLR-7H8J-K4L5-N2M9</p>
+                                    </span>
 
-                                <span class="flex justify-between">
-                                    <p style="text-align: left;">Name:</p>
-                                    <p style="text-align: right;">Theodore Songalia Suaking</p>
-                                </span>
+                                    <span class="flex justify-between">
+                                        <p style="text-align: left;">Name:</p>
+                                        <p style="text-align: right;">Theodore Songalia Suaking</p>
+                                    </span>
 
-                                <span class="flex justify-between">
-                                    <p style="text-align: left;">Sex:</p>
-                                    <p style="text-align: right;">Male</p>
-                                </span>
+                                    <span class="flex justify-between">
+                                        <p style="text-align: left;">Sex:</p>
+                                        <p style="text-align: right;">Male</p>
+                                    </span>
 
-                                <span class="flex justify-between">
-                                    <p style="text-align: left;">Birthdate:</p>
-                                    <p style="text-align: right;">08/04/2001</p>
-                                </span>
+                                    <span class="flex justify-between">
+                                        <p style="text-align: left;">Birthdate:</p>
+                                        <p style="text-align: right;">08/04/2001</p>
+                                    </span>
 
-                                <span class="flex justify-between">
-                                    <p style="text-align: left;">Location:</p>
-                                    <p style="text-align: right;">Baguio City, Benguet, 2600</p>
-                                </span>
+                                    <span class="flex justify-between">
+                                        <p style="text-align: left;">Location:</p>
+                                        <p style="text-align: right;">Baguio City, Benguet, 2600</p>
+                                    </span>
 
-                                <span class="flex justify-between">
-                                    <p style="text-align: left;">Country:</p>
-                                    <p style="text-align: right;">Philippines</p>
-                                </span>
+                                    <span class="flex justify-between">
+                                        <p style="text-align: left;">Country:</p>
+                                        <p style="text-align: right;">Philippines</p>
+                                    </span>
 
-                                <span class="flex justify-between">
-                                    <p style="text-align: left;">Quote:</p>
-                                    <p style="text-align: right;">Hell is other people.</p>
-                                </span>
+                                    <span class="flex justify-between">
+                                        <p style="text-align: left;">Quote:</p>
+                                        <p style="text-align: right;">Hell is other people.</p>
+                                    </span>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="section-3 text-white">
+                            <section>
+                                <h1> </h1>
+                                <h1> </h1>
+                            </section>
                         </div>
                     </div>
 
                 </div>
-
-
             </section>
-
-
-
         </div>
 
-        <div class="space-y-5 mt-0 md:mt-[-130px] lg:mt-[-150px] xl:mt-[-170px]">
+
+        <div class="space-y-5 mt-[2.5%] md:-mt-[4.5%] lg:-mt-[6.5%] xl:-mt-[8%]">
             <div class="">
-                <section id="section-about" class="head-about  h-lvh"
+                <section id="section-about" class="head-about h-svh"
                     data-augmented-ui="tl-2-clip-x tr-2-clip-x b-rect-x border">
                     <div class="container flex items-center justify-center h-full relative">
-                        <div class="absolute left-0 top-0 p-12">
-                            <h1 class="hidden lg:block text-white text-xl font-bold uppercase">Warning: Confidential
+                        <div class="absolute left-0 top-0 p-9">
+                            <h1
+                                class="font-['aglet-mono'] font-thin tracking-[1.25px] hidden lg:block text-white text-lg font-bold uppercase">
+                                Warning:
+                                Confidential
                             </h1>
                         </div>
-                        <div class="absolute top-0 pt-4 text-white">
+                        <div class="absolute top-0 pt-2 text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
                                 <path fill="currentColor"
                                     d="M12.025 4.475q2.65 0 5 1.138T20.95 8.9q.175.225.113.4t-.213.3t-.35.113t-.35-.213q-1.375-1.95-3.537-2.987t-4.588-1.038t-4.55 1.038T3.95 9.5q-.15.225-.35.25t-.35-.1q-.175-.125-.213-.312t.113-.388q1.55-2.125 3.888-3.3t4.987-1.175m0 2.35q3.375 0 5.8 2.25t2.425 5.575q0 1.25-.887 2.088t-2.163.837t-2.187-.837t-.913-2.088q0-.825-.612-1.388t-1.463-.562t-1.463.563t-.612 1.387q0 2.425 1.438 4.05t3.712 2.275q.225.075.3.25t.025.375q-.05.175-.2.3t-.375.075q-2.6-.65-4.25-2.588T8.95 14.65q0-1.25.9-2.1t2.175-.85t2.175.85t.9 2.1q0 .825.625 1.388t1.475.562t1.45-.562t.6-1.388q0-2.9-2.125-4.875T12.05 7.8T6.975 9.775t-2.125 4.85q0 .6.113 1.5t.537 2.1q.075.225-.012.4t-.288.25t-.387-.012t-.263-.288q-.375-.975-.537-1.937T3.85 14.65q0-3.325 2.413-5.575t5.762-2.25m0-4.8q1.6 0 3.125.387t2.95 1.113q.225.125.263.3t-.038.35t-.25.275t-.425-.025q-1.325-.675-2.738-1.037t-2.887-.363q-1.45 0-2.85.338T6.5 4.425q-.2.125-.4.063t-.3-.263t-.05-.362t.25-.288q1.4-.75 2.925-1.15t3.1-.4m0 7.225q2.325 0 4 1.563T17.7 14.65q0 .225-.137.363t-.363.137q-.2 0-.35-.137t-.15-.363q0-1.875-1.388-3.137t-3.287-1.263t-3.262 1.263T7.4 14.65q0 2.025.7 3.438t2.05 2.837q.15.15.15.35t-.15.35t-.35.15t-.35-.15q-1.475-1.55-2.262-3.162T6.4 14.65q0-2.275 1.65-3.838t3.975-1.562M12 14.15q.225 0 .363.15t.137.35q0 1.875 1.35 3.075t3.15 1.2q.15 0 .425-.025t.575-.075q.225-.05.388.063t.212.337q.05.2-.075.35t-.325.2q-.45.125-.787.138t-.413.012q-2.225 0-3.863-1.5T11.5 14.65q0-.2.138-.35t.362-.15" />
                             </svg>
                         </div>
-                        <div class="absolute top-0 right-0 p-12">
-                            <h1 class="text-white text-xl font-bold uppercase">About</h1>
+                        <div class="absolute top-0 right-0 p-9">
+                            <h1
+                                class="font-['aglet-mono'] font-thin tracking-[1.25px] text-white text-lg font-bold uppercase">
+                                About</h1>
                         </div>
-                        <div class="flex flex-wrap justify-center text-center">
+                        <div class="flex flex-wrap justify-center text-center h-full">
                             <div class="font-['Poppins'] w-full self-center px-4 lg:w-1/2 text-white space-y-5">
                                 <h1 class="text-base font-semibold md:text-xl">Hello, I am</h1>
                                 <p class="text-dark block font-bold text-6xl">Theodore Suaking</p>
@@ -403,7 +413,7 @@
         </div>
     </main>
 
-    <aside class="cyberpunk">
+    <aside class="cyberpunk hidden lg:block">
         <ul>
             <li class="flex justify-between items-center">
                 <a href="https://www.facebook.com/TheoSuaking/" target="_blank">
@@ -475,7 +485,7 @@
         });
     </script> -->
 
-<!-- 
+    <!-- 
     <script>
         function handleIntersection(entries) {
             entries.forEach(entry => {
@@ -500,7 +510,7 @@
     </script> -->
 
 
-    <script src="assets/js/header-script.js"></script> 
+    <script src="assets/js/header-script.js"></script>
     <script src="assets/js/overview-script.js"></script>
     <script src="assets/js/section-3-script.js"></script>
     <script src="assets/js/about-me-script.js"></script>

@@ -188,13 +188,35 @@ main .cmd-content {
 
 main .custom-model-viewer {
     position: relative;
-    --aug-tl: 1rem;
     --aug-border-all: 1px;
     --aug-border-bg: var(--primary-yellow);
     --aug-opacity-bg: 0.7;
     --aug-inlay-opacity: 0.5;
     --aug-inlay-bg: #1E1E1C;
 
+
+    /* --aug-tl-extend1: 100px; */
+
+    --aug-tr2-height: initial;
+    --aug-tr2-width: 3%;
+
+    --aug-tr1-width: 0px;
+    --aug-tr1-height: 40%;
+
+    --aug-bl2-height: 0px;
+    --aug-bl2-width: 0%;
+
+    --aug-bl1-width: 12px;
+    --aug-bl1-height: 33%;
+
+}
+
+main .main-contact {
+    --aug-border-all: 1px;
+    --aug-border-bg: rgba(190, 41, 105, 1);
+
+
+    --aug-b-width: 90%;
 }
 
 
@@ -229,8 +251,8 @@ main .head-about {
     /* width: 100vw; */
     /* position:fixed; */
     --aug-border-bg: var(--primary-pink);
-    --aug-border-top: 6px;
-    --aug-border-bottom: 4px;
+    --aug-border-top: 1px;
+    --aug-border-bottom: 2px;
     --aug-border-right: 1px;
     --aug-border-left: 1px;
 
@@ -254,7 +276,7 @@ main .head-about {
     /* clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 0px calc(100% - 5px)); */
 
     /* margin-top: -60px; */
-    background-color: rgba(190, 41, 105, 0.2);
+    background-color: rgba(190, 41, 105, 0.1);
 }
 
 main .head-education {
@@ -262,8 +284,8 @@ main .head-education {
     /* width: 100vw; */
     /* position:fixed; */
     --aug-border-bg: var(--primary-cyan);
-    --aug-border-top: 6px;
-    --aug-border-bottom: 4px;
+    --aug-border-top: 1px;
+    --aug-border-bottom: 2px;
     --aug-border-right: 1px;
     --aug-border-left: 1px;
 
@@ -291,8 +313,8 @@ main .head-projects {
     /* width: 100vw; */
     /* position:fixed; */
     --aug-border-bg: rgba(233, 237, 50, 1);
-    --aug-border-top: 6px;
-    --aug-border-bottom: 4px;
+    --aug-border-top: 1px;
+    --aug-border-bottom: 2px;
     --aug-border-right: 1px;
     --aug-border-left: 1px;
 
@@ -314,8 +336,8 @@ main .head-contact {
     /* width: 100vw; */
     /* position:fixed; */
     --aug-border-bg: rgba(18, 16, 16, 1);
-    --aug-border-top: 6px;
-    --aug-border-bottom: 4px;
+    --aug-border-top: 1px;
+    --aug-border-bottom: 2px;
     --aug-border-right: 1px;
     --aug-border-left: 1px;
 
