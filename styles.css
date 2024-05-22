@@ -93,6 +93,16 @@ header .header-aug.scrolled {
     --aug-border-right: 1px;
 }
 
+@media (max-width: 640px) {
+    header .header-aug.scrolled {
+        background-color: transparent;
+        --aug-border-bg: transparent;
+        --aug-border-top: 0px;
+        --aug-border-bottom: 0px;
+        --aug-border-left: 0px;
+        --aug-border-right: 0px;
+    }
+}
 
 li.education-aug {
     --aug-border-bg: var(--secondary-yellow);
