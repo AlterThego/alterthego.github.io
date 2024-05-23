@@ -536,9 +536,9 @@ p.cyberpunk:before,
         --aug-border-left: 0px;
         --aug-border-right: 0px;
     }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
+  }
+  
+  @media (min-width: 576px) and (max-width: 768px) {
     header .header-aug.scrolled {
         background-color: transparent;
         --aug-border-bg: transparent;
@@ -547,9 +547,9 @@ p.cyberpunk:before,
         --aug-border-left: 0px;
         --aug-border-right: 0px;
     }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
+  }
+  
+  @media (min-width: 768px) and (max-width: 992px) {
     header .header-aug.scrolled {
         background-color: transparent;
         --aug-border-bg: transparent;
@@ -558,4 +558,4 @@ p.cyberpunk:before,
         --aug-border-left: 0px;
         --aug-border-right: 0px;
     }
-}
+  }

@@ -40,3 +40,36 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+
+
+// Cubic scroll animation
+function easeInOutCubic(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t * t + b;
+    t -= 2;
+    return (c / 2) * (t * t * t + 2) + b;
+}
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = e.currentTarget.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        const startY = window.pageYOffset;
+        const targetY = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const distance = targetY - startY;
+        const duration = 1000; // Animation duration in milliseconds
+        let start = null;
+
+        function animation(currentTime) {
+            if (!start) start = currentTime;
+            const timeElapsed = currentTime - start;
+            const run = easeInOutCubic(timeElapsed, startY, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        requestAnimationFrame(animation);
+    });
+});
