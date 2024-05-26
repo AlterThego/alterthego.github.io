@@ -122,20 +122,20 @@
                                     hover:bg-cyan-400 hover:bg-opacity-10 hover:border-cyan-400 hover:text-cyan-400">
                             <p class="font-medium text-md lg:text-sm">Education</p>
                         </button> -->
-                        <button data-section="education" data-augmented-ui="br-clip border" class="btn p-2 lg:mb-0 mb-2 mr-2 border border-[--primary-red] rounded-none section-1-aug bg-gray-950 bg-opacity-20 text-[--primary-red] transition-all duration-600 
+                        <button data-section="education" data-augmented-ui="br-clip border" class="btn p-2 lg:mb-0 mb-2 mr-2 border border-[--primary-pink] rounded-none section-1-aug bg-gray-950 bg-opacity-20 text-[--primary-red] transition-all duration-600 
                         hover:bg-cyan-400 hover:bg-opacity-10 hover:border-cyan-400 hover:text-cyan-400">
                             <p class="font-medium text-md lg:text-sm">Education</p>
                         </button>
-                        <button data-section="experience" data-augmented-ui="br-clip border" class="btn p-2 lg:mb-0 mb-2 mr-0 lg:mr-2 border border-[--primary-red] rounded-none section-1-aug bg-gray-950 bg-opacity-20 text-[--primary-red] transition-all duration-600 
+                        <button data-section="experience" data-augmented-ui="br-clip border" class="btn p-2 lg:mb-0 mb-2 mr-0 lg:mr-2 border border-[--primary-pink] rounded-none section-1-aug bg-gray-950 bg-opacity-20 text-[--primary-red] transition-all duration-600 
                             hover:bg-cyan-400 hover:bg-opacity-10 hover:border-cyan-400 hover:text-cyan-400">
                             <p class="font-medium text-md lg:text-sm">Experience</p>
                         </button>
-                        <button data-section="skills" data-augmented-ui="br-clip border" class="btn p-2 mr-2 border border-[--primary-red] rounded-none section-1-aug bg-gray-950 bg-opacity-20 text-[--primary-red] transition-all duration-600 
+                        <button data-section="skills" data-augmented-ui="br-clip border" class="btn p-2 mr-2 border border-[--primary-pink] rounded-none section-1-aug bg-gray-950 bg-opacity-20 text-[--primary-red] transition-all duration-600 
                             hover:bg-cyan-400 hover:bg-opacity-10 hover:border-cyan-400 hover:text-cyan-400">
                             <p class="font-medium text-md lg:text-sm">Skills</p>
                         </button>
 
-                        <button data-section="projects" data-augmented-ui="br-clip border" class="btn p-2 border border-[--primary-red] rounded-none section-1-aug bg-gray-950 bg-opacity-20 text-[--primary-red] transition-all duration-600 
+                        <button data-section="projects" data-augmented-ui="br-clip border" class="btn p-2 border border-[--primary-pink] rounded-none section-1-aug bg-gray-950 bg-opacity-20 text-[--primary-red] transition-all duration-600 
                             hover:bg-cyan-400 hover:bg-opacity-10 hover:border-cyan-400 hover:text-cyan-400">
                             <p class="font-medium text-md lg:text-sm">Projects</p>
                         </button>
@@ -454,11 +454,8 @@
     </aside>
 
 
-    <button class="fixed bottom-4 right-4 cybr-btn flex justify-end items-end transition-transform 
-        transform hover:-translate-y-1 hover:scale-110">
-
+    <button class="fixed bottom-4 right-4 cybr-btn flex justify-end items-end">
         <span aria-hidden>
-
             <svg xmlns="http://www.w3.org/2000/svg" class="p-2.5" width="2em" height="2em" viewBox="0 0 24 24">
                 <path fill="currentColor"
                     d="M21 10.975V8a2 2 0 0 0-2-2h-6V4.688c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5a2 2 0 0 0-2 2v2.998l-.072.005A.999.999 0 0 0 2 12v2a1 1 0 0 0 1 1v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a1 1 0 0 0 1-1v-1.938a1.004 1.004 0 0 0-.072-.455c-.202-.488-.635-.605-.928-.632M7 12c0-1.104.672-2 1.5-2s1.5.896 1.5 2s-.672 2-1.5 2S7 13.104 7 12m8.998 6c-1.001-.003-7.997 0-7.998 0v-2s7.001-.002 8.002 0zm-.498-4c-.828 0-1.5-.896-1.5-2s.672-2 1.5-2s1.5.896 1.5 2s-.672 2-1.5 2" />
@@ -476,8 +473,7 @@
         <span aria-hidden class="cybr-btn__tag text-black">gpt</span>
     </button>
 
-
-    <aside id="chatbot" class="fixed bottom-4 right-24 hidden w-[575px] h-[450px] shadow-lg flex flex-col">
+    <aside id="chatbot" class="fixed bottom-4 right-24 w-[575px] h-[450px] shadow-lg flex flex-col chatbot-hidden">
         <div id="close-chatbot" class="flex py-1 cursor-pointer justify-between items-center bg-[--secondary-yellow] px-4 hover:bg-cyan-400 
             hover:text-[--primary-cyan] hover:bg-opacity-40" data-augmented-ui="tl-clip border"
             title="Press to minimize">
@@ -496,7 +492,6 @@
         <div id="iframe" class="flex-grow" data-augmented-ui="br-clip border">
             <iframe src="https://www.chatbase.co/chatbot-iframe/FQZb462PJDvq_nUvB204r" class="w-full h-full"></iframe>
         </div>
-
     </aside>
 
 
@@ -523,13 +518,15 @@ defer> -->
             const cybrBtn = document.querySelector('.cybr-btn');
 
             cybrBtn.addEventListener('click', function () {
-                chatbotAside.classList.toggle('hidden');
-                cybrBtn.classList.toggle('active'); // Toggle the 'active' class on the button
+                chatbotAside.classList.toggle('chatbot-hidden');
+                chatbotAside.classList.toggle('chatbot-visible');
+                cybrBtn.classList.toggle('active');
             });
 
             document.getElementById('close-chatbot').addEventListener('click', function () {
-                chatbotAside.classList.add('hidden');
-                cybrBtn.classList.remove('active'); // Remove the 'active' class when chatbot is closed
+                chatbotAside.classList.add('chatbot-hidden');
+                chatbotAside.classList.remove('chatbot-visible');
+                cybrBtn.classList.remove('active');
             });
         });
     </script>
