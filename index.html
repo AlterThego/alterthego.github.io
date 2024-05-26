@@ -51,7 +51,7 @@
                                 class="about-aug bg-gray-950 bg-opacity-100 lg:bg-opacity-40 py-3 hover:bg-[#396573] hover:text-cyan-400 hover:border-cyan-400 transition duration-300 ease-in-out"
                                 data-augmented-ui="tl-clip border">
                                 <i class="block sm:hidden px-12 fa-solid fa-user"></i>
-                                <p class="hidden sm:block">About</p>
+                                <p class="hidden sm:block font-medium">About</p>
                             </li>
                         </a>
 
@@ -60,7 +60,7 @@
                                 class="education-aug bg-gray-950 bg-opacity-100 lg:bg-opacity-40 py-3 hover:bg-[#396573] hover:text-cyan-400 hover:border-cyan-400 nav-link transition duration-300 ease-in-out"
                                 data-augmented-ui="border">
                                 <i class="block sm:hidden px-2 fa-solid fa-graduation-cap"></i>
-                                <p class="hidden sm:block">Education</p>
+                                <p class="hidden sm:block font-medium">Education</p>
                             </li>
                         </a>
 
@@ -69,7 +69,7 @@
                             uppercase font-bold text-xl py-3 px-0 lg:px-4 hover:bg-[#396573] hover:text-cyan-400 
                             hover:border-cyan-400 transition duration-300 ease-in-out" data-augmented-ui="border">
                                 <i class="block md:hidden sm:hidden px-2 fa-solid fa-table-columns"></i>
-                                <p class="hidden md:block sm:block">Overview</p>
+                                <p class="hidden sm:block font-semibold">Overview</p>
                             </li>
                         </a>
 
@@ -78,7 +78,7 @@
                                 class="projects-aug bg-gray-950 bg-opacity-100 lg:bg-opacity-40 py-3 hover:bg-[#396573] hover:text-cyan-400 hover:border-cyan-400 transition duration-300 ease-in-out"
                                 data-augmented-ui="border">
                                 <i class="block sm:hidden px-2 fa-solid fa-map"></i>
-                                <p class="hidden sm:block">Project</p>
+                                <p class="hidden sm:block font-medium">Project</p>
                             </li>
                         </a>
 
@@ -87,7 +87,7 @@
                                 class="contact-aug bg-gray-950 bg-opacity-100 lg:bg-opacity-40 py-3 hover:bg-[#396573] hover:text-cyan-400 hover:border-cyan-400 transition duration-300 ease-in-out"
                                 data-augmented-ui="br-clip border">
                                 <i class="block sm:hidden px-2 fa-solid fa-address-book"></i>
-                                <p class="hidden sm:block">Contact</p>
+                                <p class="hidden sm:block font-medium">Contact</p>
                             </li>
                         </a>
                     </div>
@@ -111,7 +111,7 @@
             <section class="main-top grid grid-cols-1 lg:grid-cols-3 h-auto lg:h-screen mt-10 lg:mt-14">
                 <!-- First Section - About Me -->
                 <div class="col-span-3 lg:col-span-1 p-8 text-center lg:text-left space-y-5">
-                    <h2 class="main-aug text-xl text-[--primary-cyan] bg-red-500 bg-opacity-10 px-10 py-2.5"
+                    <h2 class="main-aug text-xl text-[--primary-cyan] bg-red-500 bg-opacity-10 px-10 py-2.5 font-semibold"
                         data-augmented-ui="tr-2-clip-x bl-clip border">
                         About Me
                     </h2>
@@ -166,14 +166,14 @@
                         <button data-augmented-ui="br-clip border" class="btn border py-3 px-4 border-[--secondary-yellow] rounded-none 
                                 clear-btn bg-[--secondary-yellow] bg-opacity-20 text-gray-950 transition-all 
                                 duration-600 hover:bg-cyan-400 hover:bg-opacity-10 hover:border-cyan-400 
-                                hover:text-cyan-400">Terminate</button>
+                                hover:text-cyan-400 font-medium">Terminate</button>
                     </div>
 
                 </div>
 
                 <!-- Second Section - Avatar -->
                 <div class="col-span-3 lg:col-span-1 p-8 hidden lg:block">
-                    <h2 class="main-aug bg-red-500 bg-opacity-10 text-xl text-center text-[--primary-cyan] mb-4 py-2.5"
+                    <h2 class="main-aug bg-red-500 bg-opacity-10 text-xl text-center text-[--primary-cyan] mb-4 py-2.5 font-semibold"
                         data-augmented-ui="br-clip bl-clip border">
                         Avatar
                     </h2>
@@ -189,8 +189,8 @@
                 <!-- Third Section - Contact Information -->
                 <div class="col-span-3 lg:col-span-1 p-8 text-center lg:text-right">
                     <section>
-                        <h2 class="main-aug bg-red-500 bg-opacity-10 text-[--primary-cyan] text-xl mb-4 px-10 py-2.5"
-                            data-augmented-ui="tl-2-clip-x br-clip border">Contact Information
+                        <h2 class="main-aug bg-red-500 bg-opacity-10 text-[--primary-cyan] text-xl mb-4 px-10 py-2.5 font-semibold"
+                            data-augmented-ui="tl-2-clip-x br-clip border">Personal Information
                         </h2>
                         <p class="border-[--primary-yellow] border-b-4 mb-5"></p>
                     </section>
@@ -439,7 +439,6 @@
                     </div>
                 </a>
             </li>
-
             <li class="flex justify-between items-center">
                 <a href="mailto: theosuaking@gmail.com" target="_blank">
                     <div class="flex items-center space-x-2">
@@ -454,18 +453,97 @@
         </ul>
     </aside>
 
+
+    <button class="fixed bottom-4 right-4 cybr-btn flex justify-end items-end transition-transform 
+        transform hover:-translate-y-1 hover:scale-110">
+
+        <span aria-hidden>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="p-2.5" width="2em" height="2em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M21 10.975V8a2 2 0 0 0-2-2h-6V4.688c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5a2 2 0 0 0-2 2v2.998l-.072.005A.999.999 0 0 0 2 12v2a1 1 0 0 0 1 1v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a1 1 0 0 0 1-1v-1.938a1.004 1.004 0 0 0-.072-.455c-.202-.488-.635-.605-.928-.632M7 12c0-1.104.672-2 1.5-2s1.5.896 1.5 2s-.672 2-1.5 2S7 13.104 7 12m8.998 6c-1.001-.003-7.997 0-7.998 0v-2s7.001-.002 8.002 0zm-.498-4c-.828 0-1.5-.896-1.5-2s.672-2 1.5-2s1.5.896 1.5 2s-.672 2-1.5 2" />
+            </svg>
+        </span>
+        <span aria-hidden class="cybr-btn__glitch">
+            <svg xmlns="http://www.w3.org/2000/svg" class="p-2.5" width="2em" height="2em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M21.928 11.607c-.202-.488-.635-.605-.928-.633V8c0-1.103-.897-2-2-2h-6V4.61c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5c-1.103 0-2 .897-2 2v2.997l-.082.006A1 1 0 0 0 1.99 12v2a1 1 0 0 0 1 1H3v5c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5a1 1 0 0 0 1-1v-1.938a1.006 1.006 0 0 0-.072-.455M5 20V8h14l.001 3.996L19 12v2l.001.005l.001 5.995z" />
+                <ellipse cx="8.5" cy="12" fill="currentColor" rx="1.5" ry="2" />
+                <ellipse cx="15.5" cy="12" fill="currentColor" rx="1.5" ry="2" />
+                <path fill="currentColor" d="M8 16h8v2H8z" />
+            </svg>
+        </span>
+        <span aria-hidden class="cybr-btn__tag text-black">gpt</span>
+    </button>
+
+
+    <aside id="chatbot" class="fixed bottom-4 right-24 hidden w-[575px] h-[450px] shadow-lg flex flex-col">
+        <div id="close-chatbot" class="flex py-1 cursor-pointer justify-between items-center bg-[--secondary-yellow] px-4 hover:bg-cyan-400 
+            hover:text-[--primary-cyan] hover:bg-opacity-40" data-augmented-ui="tl-clip border"
+            title="Press to minimize">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M21.928 11.607c-.202-.488-.635-.605-.928-.633V8c0-1.103-.897-2-2-2h-6V4.61c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5c-1.103 0-2 .897-2 2v2.997l-.082.006A1 1 0 0 0 1.99 12v2a1 1 0 0 0 1 1H3v5c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5a1 1 0 0 0 1-1v-1.938a1.006 1.006 0 0 0-.072-.455M5 20V8h14l.001 3.996L19 12v2l.001.005l.001 5.995z" />
+                <ellipse cx="8.5" cy="12" fill="currentColor" rx="1.5" ry="2" />
+                <ellipse cx="15.5" cy="12" fill="currentColor" rx="1.5" ry="2" />
+                <path fill="currentColor" d="M8 16h8v2H8z" />
+            </svg>
+            <p class="font-semibold">ChatGPT</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M6 21v-2h12v2z" />
+            </svg>
+        </div>
+        <div id="iframe" class="flex-grow" data-augmented-ui="br-clip border">
+            <iframe src="https://www.chatbase.co/chatbot-iframe/FQZb462PJDvq_nUvB204r" class="w-full h-full"></iframe>
+        </div>
+
+    </aside>
+
+
     <footer class="bottom-0 transparent text-white p-4">
         <div class="container mx-auto text-center">
             <p>Made with Tailwind and Augmented-ui.</p>
         </div>
     </footer>
+    <!-- <script>
+window.embeddedChatbotConfig = {
+chatbotId: "FQZb462PJDvq_nUvB204r",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="FQZb462PJDvq_nUvB204r"
+domain="www.chatbase.co"
+defer> -->
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const chatbotAside = document.getElementById('chatbot');
+            const cybrBtn = document.querySelector('.cybr-btn');
 
+            cybrBtn.addEventListener('click', function () {
+                chatbotAside.classList.toggle('hidden');
+                cybrBtn.classList.toggle('active'); // Toggle the 'active' class on the button
+            });
 
+            document.getElementById('close-chatbot').addEventListener('click', function () {
+                chatbotAside.classList.add('hidden');
+                cybrBtn.classList.remove('active'); // Remove the 'active' class when chatbot is closed
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
     <script src="assets/js/header-script.js"></script>
     <script src="assets/js/overview-script.js"></script>
     <script src="assets/js/section-3-script.js"></script>
     <script src="assets/js/about-me-script.js"></script>
-    <script src="script.js"></script>
+
+</body>
+
+<body>
+
 </body>
 
 </html>
