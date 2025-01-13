@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&amp;display=swap");
+
 :root {
   --mono-font: monospace;
   --primary-font: 'Rajdhani', sans-serif;
@@ -38,7 +40,7 @@ body {
   font-family: var(--primary-font);
   position: relative;
   min-height: 100vh;
-  max-width: 100vw;
+  max-width: auto;
   overflow-x: hidden;
   margin: 0;
   z-index: 0;
@@ -151,8 +153,43 @@ li.contact-aug:hover {
 main .main-aug {
   --aug-border-bg: var(--primary-red);
   --aug-border-all: 1px;
-  --aug-border-top: 4px;
+  --aug-border-top: 1px;
+ 
+
+  border: 1px solid rgba(244, 114, 182, 1);
+  background: rgba(17, 24, 39, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 11px;
+  height: 60px;
+  font-family: var(--primary-font);
+  color: white;
+  font-weight: 400;
+  animation: BorderTextGlow 4s infinite;
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
 }
+
+main .main-aug:hover{
+  transform: scale(1.01); /* Small zoom-in effect */
+}
+
+@keyframes BorderTextGlow {
+  0% {
+    border-color: rgba(244, 114, 182, 0.3);
+    text-shadow: 0 0 5px #f472b6, 0 0 10px #f472b6;
+  }
+
+  50% {
+    border-color: rgba(244, 114, 182, 0.7);
+    text-shadow: 0 0 10px #f472b6, 0 0 20px #f472b6;
+  }
+
+  100% {
+    border-color: rgba(244, 114, 182, 0.3);
+    text-shadow: 0 0 5px #f472b6, 0 0 10px #f472b6;
+  }
+}
+
+
 
 
 main .section-1-aug {
@@ -210,7 +247,6 @@ main .custom-model-viewer {
 
   --aug-bl1-width: 12px;
   --aug-bl1-height: 33%;
-
 }
 
 main .main-contact {
@@ -646,6 +682,7 @@ aside.cyberpunk a:after {
   transform-origin: bottom right;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 #close-chatbot {
   --aug-border-bg: var(--secondary-yellow);
   --aug-border-top: 1px;

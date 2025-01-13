@@ -26,19 +26,6 @@ const data = [
             <p class="text-green-600 text-center font-bold">Data compilation successful.</p>`
     },
     {
-        skills: `
-            <p class="text-cyan-400 font-bold">searching database. </p>
-            <p class="text-cyan-400 font-bold">preparing for skill information rendering. </p>
-            <p class="text-green-500 font-bold">ready for access. </p>
-            >> database\\PLR-7H8J-K4L5-N2M9\\Skills: [<br> 
-            --programming-languages: JavaScript, PHP, HTML, CSS, SAP ABAP<br> 
-            --frameworks-Libraries: Laravel, Node.js, Tailwind.css<br> 
-            --databases: MySQL, SQLite<br> 
-            --tools: Git, Visual Studio Code, Github<br> 
-            --soft-skills: Problem-solving, Critical Thinking, Communication <br> ]
-            <p class="text-green-600 text-center font-bold">Data compilation successful.</p>`
-    },
-    {
         projects: `>> database\\PLR-7H8J-K4L5-N2M9\\Projects: [<br> 
             <p class="text-cyan-400 font-bold">searching database. </p>
             <p class="text-cyan-400 font-bold">preparing for project information rendering. </p>
@@ -46,7 +33,21 @@ const data = [
             <p><a href="#"></a>1. Personal Portfolio Website</p>
             <a href="https://github.com/AlterThego/PVO-EcoMetrics" target="_blank">2. Socio Economic Profile of Benguet</p> ]<br>
             <p class="text-green-600 text-center font-bold">Data compilation successful.</p>`
+    },
+    {
+        skills: `
+            <p class="text-cyan-400 font-bold">searching database. </p>
+            <p class="text-cyan-400 font-bold">preparing for skill information rendering. </p>
+            <p class="text-green-500 font-bold">ready for access. </p>
+            >> database\\PLR-7H8J-K4L5-N2M9\\Skills: [<br> 
+            --programming-languages: JavaScript, PHP, HTML, CSS, SAP ABAP<br> 
+            --frameworks-Libraries: Laravel, Node.js, TailwindCSS<br> 
+            --databases: MySQL, SQLite<br> 
+            --tools: Git, Visual Studio Code, Github<br> 
+            --soft-skills: Problem-solving, Critical Thinking, Communication <br> ]
+            <p class="text-green-600 text-center font-bold">Data compilation successful.</p>`
     }
+    
 ];
 
 const allElements = document.getElementsByClassName("typeing");

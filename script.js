@@ -42,34 +42,55 @@ function scrollToTop() {
 
 
 
-// Cubic scroll animation
+// Cubic scroll animation function
 function easeInOutCubic(t, b, c, d) {
     t /= d / 2;
     if (t < 1) return (c / 2) * t * t * t + b;
     t -= 2;
     return (c / 2) * (t * t * t + 2) + b;
 }
-const navLinks = document.querySelectorAll('nav a');
+
+// Function to handle smooth scrolling
+function smoothScroll(targetElement, duration = 1000) {
+    const startY = window.pageYOffset;
+    const targetY = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const distance = targetY - startY;
+    let start = null;
+
+    function animation(currentTime) {
+        if (!start) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const run = easeInOutCubic(timeElapsed, startY, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    requestAnimationFrame(animation);
+}
+
+// Select only navigation section links
+const navLinks = document.querySelectorAll('nav a[href^="#section-"]');
+
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = e.currentTarget.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
 
-        const startY = window.pageYOffset;
-        const targetY = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        const distance = targetY - startY;
-        const duration = 1000; // Animation duration in milliseconds
-        let start = null;
-
-        function animation(currentTime) {
-            if (!start) start = currentTime;
-            const timeElapsed = currentTime - start;
-            const run = easeInOutCubic(timeElapsed, startY, distance, duration);
-            window.scrollTo(0, run);
-            if (timeElapsed < duration) requestAnimationFrame(animation);
+        // Only proceed if it's a section link
+        if (targetId && targetId.startsWith('#section-')) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                smoothScroll(targetElement);
+            }
         }
-
-        requestAnimationFrame(animation);
     });
 });
+
+// Separate handler for the Overview button (if needed)
+const overviewButton = document.querySelector('nav a[href="#"]');
+if (overviewButton) {
+    overviewButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        smoothScroll(document.body);
+    });
+}
