@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
     <script src="https://kit.fontawesome.com/b9a49ab50b.js" crossorigin="anonymous"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-    <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+
     <style>
         /* Initially hide both layouts */
         #defaultLayout,
@@ -788,26 +788,10 @@
 
 
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const chatbotAside = document.getElementById('chatbot');
-            const cybrBtn = document.querySelector('.cybr-btn');
 
-            cybrBtn.addEventListener('click', function () {
-                chatbotAside.classList.toggle('chatbot-hidden');
-                chatbotAside.classList.toggle('chatbot-visible');
-                cybrBtn.classList.toggle('active');
-            });
-
-            document.getElementById('close-chatbot').addEventListener('click', function () {
-                chatbotAside.classList.add('chatbot-hidden');
-                chatbotAside.classList.remove('chatbot-visible');
-                cybrBtn.classList.remove('active');
-            });
-        });
-    </script>
 
     <script src="script.js"></script>
+    <script src="assets/js/chatbot-script.js"></script>
     <script src="assets/js/header-script.js"></script>
     <script src="assets/js/overview-script.js"></script>
     <script src="assets/js/section-3-script.js"></script>
