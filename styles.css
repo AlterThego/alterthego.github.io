@@ -55,7 +55,8 @@ body::before {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: #441618;
+  /* background-color: #441618; */
+  background-color: #000;
   opacity: 0.7;
   z-index: -1;
   pointer-events: none;
@@ -80,8 +81,12 @@ header .header-aug {
   --aug-border-left: 0px;
   --aug-border-right: 0px;
   --aug-br: 2rem;
-  --aug-tl: 2rem;
+  --aug-bl: 2rem;
   box-shadow: none;
+
+
+  margin-left: 10em;
+  margin-right: 10em;
 
 }
 
@@ -135,14 +140,25 @@ li.contact-aug {
   --aug-border-bg: var(--secondary-yellow);
   --aug-border-top: 1px;
   --aug-border-bottom: 1px;
-  --aug-border-right: 1px;
+  --aug-border-right: 0px;
   --aug-border-left: 0px;
+}
+
+li.resume-aug {
+  --aug-border-bg: var(--secondary-yellow);
+  --aug-border-top: 1px;
+  --aug-border-bottom: 1px;
+  --aug-border-right: 1px;
+  --aug-border-left: 1px;
+
+  background-color: var(--secondary-yellow);
 }
 
 li.education-aug:hover,
 li.about-aug:hover,
 li.overview-aug:hover,
 li.projects-aug:hover,
+li.resume-aug:hover,
 li.contact-aug:hover {
   --aug-border-bg: var(--primary-cyan);
   --aug-border-all: 2px;
@@ -151,13 +167,13 @@ li.contact-aug:hover {
 
 
 main .main-aug {
-  --aug-border-bg: var(--primary-red);
+  --aug-border-bg: var(--secondary-yellow);
   --aug-border-all: 1px;
   --aug-border-top: 1px;
  
 
-  border: 1px solid rgba(244, 114, 182, 1);
-  background: rgba(17, 24, 39, 0.1);
+  /* border: 1px solid var(--secondary-yellow); */
+  background: rgba(17, 24, 39, 0.9);
   backdrop-filter: blur(10px);
   padding: 11px;
   height: 60px;
@@ -166,12 +182,14 @@ main .main-aug {
   font-weight: 400;
   animation: BorderTextGlow 4s infinite;
   transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+
+
 }
 
 main .main-aug:hover{
   transform: scale(1.01); /* Small zoom-in effect */
 }
-
+/* 
 @keyframes BorderTextGlow {
   0% {
     border-color: rgba(244, 114, 182, 0.3);
@@ -187,16 +205,15 @@ main .main-aug:hover{
     border-color: rgba(244, 114, 182, 0.3);
     text-shadow: 0 0 5px #f472b6, 0 0 10px #f472b6;
   }
-}
+} */
 
 
 
 
 main .section-1-aug {
-  --aug-border-bg: var(--primary-red);
+  --aug-border-bg: var(--primary-yellow);
   --aug-border-all: 1px;
 }
-
 
 
 main .section-1-aug:hover {
@@ -251,7 +268,8 @@ main .custom-model-viewer {
 
 main .main-contact {
   --aug-border-all: 1px;
-  --aug-border-bg: rgba(190, 41, 105, 1);
+  --aug-border-top: 0px;
+  --aug-border-bg: var(--primary-yellow);
 
 
   --aug-b-width: 90%;
@@ -704,41 +722,85 @@ aside.cyberpunk a:after {
 
 p.cyberpunk,
 .cyberpunk p {
-  border: 30px solid rgba(97, 97, 74, 0.4);
-  border-right: 5px solid rgba(233, 237, 50, 0.4);
-  border-left: 5px solid rgba(233, 237, 50, 0.4);
-  border-bottom: 24px solid #000;
+  border: 30px solid rgba(255, 240, 0, 0.8);
+  border-right: 2px solid  rgba(255, 240, 0, 0.8);
+  border-left: 2px solid  rgba(255, 240, 0, 0.8);
+  border-bottom: 24px solid  rgba(255, 240, 0, 0.8);
   padding: 5px;
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
-  background-color: rgba(15, 15, 15, 0.4);
-  font-size: 1.1rem;
+  background-color: rgba(17, 24, 39, 0.9);
+  /* font-size: 1.1rem; */
   position: relative;
   /* font-family: monospace; */
   /* text-align: end; */
 }
 
-.cyberpunk p span.label {
+p.cyberpunk-mirror,
+.cyberpunk-mirror p {
+  border: 30px solid rgba(255, 240, 0, 0.8);
+  border-right: 2px solid  rgba(255, 240, 0, 0.8);
+  border-left: 2px solid  rgba(255, 240, 0, 0.8);
+  border-bottom: 24px solid  rgba(255, 240, 0, 0.8);
+  padding: 5px;
+  clip-path: polygon(
+    100% 25px,                          /* was 0px 25px */
+    calc(100% - 26px) 0px,             /* was 26px 0px */
+    calc(40% + 25px) 0px,              /* was calc(60% - 25px) 0px */
+    40% 25px,                          /* was 60% 25px */
+    0% 25px,                           /* was 100% 25px */
+    0% calc(100% - 10px),              /* was 100% calc(100% - 10px) */
+    15px calc(100% - 10px),            /* was calc(100% - 15px) calc(100% - 10px) */
+    calc(20% + 10px) calc(100% - 10px),/* was calc(80% - 10px) calc(100% - 10px) */
+    calc(20% + 15px) 100%,             /* was calc(80% - 15px) 100% */
+    calc(100% - 80px) calc(100% - 0px),/* was 80px calc(100% - 0px) */
+    calc(100% - 65px) calc(100% - 15px),/* was 65px calc(100% - 15px) */
+    100% calc(100% - 15px)             /* was 0% calc(100% - 15px) */
+  );
+  background-color: rgba(17, 24, 39, 0.9);
+  /* font-size: 1.1rem; */
+  position: relative;
+  /* font-family: monospace; */
+  /* text-align: end; */
+  z-index: 3;
+}
+
+.cyberpunk p span.label{
   color: var(--primary-cyan);
   font-weight: bold;
 }
 
 p.cyberpunk.inverse,
 .cyberpunk p.inverse {
-  border: 1px;
-  padding: 50px 20px 70px;
+  border: none;
+  padding: 40px 15px 30px;
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
-  background-color: rgba(68, 22, 24, 0.6);
-  color: var(--white);
+  background-color: black;
+  color: var(--secondary-yellow);
   border-right: 3px solid var(--border-color);
 }
 
 p.cyberpunk:before,
 .cyberpunk p:before {
-  content: "P-14";
+  content: "Press any of the buttons";
   display: block;
   position: absolute;
   bottom: -12px;
   right: 25px;
+  padding: 2px 2px 0px 2px;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: var(--primary-red);
+  background-color: var(--primary-yellow);
+  border-left: 2px solid var(--primary-red);
+}
+
+p.cyberpunk-mirror:before,
+.cyberpunk-mirror p:before {
+  content: "Confidential";
+  display: block;
+  position: absolute;
+  bottom: -12px;
+  left: 25px;
   padding: 2px 2px 0px 2px;
   font-size: 0.6rem;
   line-height: 0.6rem;
