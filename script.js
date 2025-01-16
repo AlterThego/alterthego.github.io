@@ -69,7 +69,7 @@ function smoothScroll(targetElement, duration = 1000) {
 }
 
 // Select only navigation section links
-const navLinks = document.querySelectorAll('nav a[href^="#section-"]');
+const navLinks = document.querySelectorAll('header a[href^="#section-"]');
 
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
