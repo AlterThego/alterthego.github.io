@@ -16,7 +16,7 @@
   --primary-pink: #BE2969;
 
   --secondary-yellow: #E9ED32;
-  --vh: 1vh;
+
 }
 
 
@@ -26,14 +26,14 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   background-image: url('assets/images/cyberpunk.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0;
-}
+} */
 
 body {
   font-family: var(--primary-font);
@@ -46,14 +46,21 @@ body {
 body::before {
   content: '';
   position: fixed;
-  height: calc(var(--vh) * 100);
-  width: 100%;
-  top: 0;
-  left: 0;
+  inset: 0;
   background-color: #000;
   opacity: 0.7;
   z-index: -1;
   pointer-events: none;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2; /* Below your body::before overlay */
 }
 
 header .header-aug {

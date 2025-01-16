@@ -80,6 +80,7 @@
 </head>
 
 <body>
+    <img src="assets/images/cyberpunk.jpg" alt="background" class="bg-image">
     <div id="loading" class="bg-white fixed flex flex-col items-center justify-center h-full w-full">
         <img class="h-1/6" src="assets/gif/loading.gif" alt="">
         <p class="mt-4">Loading...</p>
@@ -906,19 +907,6 @@
     <script src="assets/js/about-me-script.js"></script>
     <script src="assets/js/dynamic-switch-script.js"></script>
     <script src="assets/js/hamburger-script.js"></script>
-
-    <script>
-        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-        let vh = window.innerHeight * 0.01;
-        // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-        // We listen to the resize event (and orientation change)
-        window.addEventListener('resize', () => {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        });
-    </script>
 </body>
 
 <body>
