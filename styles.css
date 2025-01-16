@@ -43,7 +43,7 @@ body {
   z-index: 0;
 }
 
-body::before {
+/* body::before {
   content: '';
   position: fixed;
   inset: 0;
@@ -51,16 +51,13 @@ body::before {
   opacity: 0.7;
   z-index: -1;
   pointer-events: none;
+} */
+.z-background {
+  z-index: -2;
 }
 
-.bg-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -2; /* Below your body::before overlay */
+.z-overlay {
+  z-index: -1;
 }
 
 header .header-aug {
