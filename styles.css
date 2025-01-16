@@ -26,14 +26,18 @@
   box-sizing: border-box;
 }
 
+html, body {
+  min-height: 100vh;
+  background-color: transparent; 
+}
+
 html {
-  height: 100%;
-  width: 100%;
   background-image: url('assets/images/cyberpunk.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+  margin: 0;
 }
 
 body {
@@ -42,8 +46,6 @@ body {
   overflow-x: hidden;
   margin: 0;
   z-index: 0;
-  height: 100%;
-  width: 100%;
 }
 
 body::before {
