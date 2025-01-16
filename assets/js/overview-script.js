@@ -1,4 +1,3 @@
-
 function handleIntersection(entries) {
     entries.forEach(entry => {
         const linkId = entry.target.getAttribute('id') + '-link';

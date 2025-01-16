@@ -88,8 +88,9 @@
         <header class="text-white shadow-md fixed w-full z-50">
             <nav class="header-aug py-2.5 lg:px-14 px-4 mx-4 lg:px-14" data-augmented-ui="br-clip bl-clip border">
                 <div class="grid md:grid-cols-3 grid-cols-4 max-w-screen-2xl mx-auto">
+                    <!-- Hamburger Button -->
                     <span class="block xl:hidden">
-                        <button id="hamburger-button" class="h-10 p-2 flex items-center justify-start px-10">
+                        <button id="hamburger-button" class=" p-1 flex items-center justify-center px-10">
                             <i class="fa-solid fa-bars text-xl"></i>
                         </button>
                     </span>
@@ -172,33 +173,40 @@
                     </div>
                 </div>
             </nav>
-            <div id="menu"
-                class="fixed top-0 left-0 h-full w-auto bg-yellow-300 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
-                <!-- Close Button -->
-                <button id="close-button" class="absolute top-4 right-4 text-black focus:outline-none">
-                    <i class="fa-solid fa-times text-2xl"></i>
-                </button>
+            <!-- Hamburger content -->
+            <section class="bg-gray-950 block xl:hidden">
+                <div id="menu"
+                    class="fixed top-0 left-0 h-full w-1/3 bg-yellow-300 bg-opacity-80 transform -translate-x-full transition-transform duration-300 ease-in-out">
+                    <!-- Close Button -->
+                    <div class="top-0 left-0 bg-gray-950 bg-opacity-90  h-14 shadow">
 
-                <!-- Menu Items -->
-                <div class="mt-16 p-4 block xl:hidden">
-                    <ul class="space-y-4">
-                        <li><a href="#section-about" class="text-gray-700 hover:text-gray-900 font-semibold">Info</a>
-                        </li>
-                        <li><a href="#section-projects"
-                                class="text-gray-700 hover:text-gray-900 font-semibold">Works</a></li>
-                        <li><a href="#section-education"
-                                class="text-gray-700 hover:text-gray-900 font-semibold">Education</a></li>
-                        <li><a href="#section-contact"
-                                class="text-gray-700 hover:text-gray-900 font-semibold">Contact</a></li>
-                    </ul>
+                    </div>
+                    <button id="close-button" class="absolute top-3 right-4 text-yellow-300 focus:outline-none">
+                        <i class="fa-solid fa-times text-2xl"></i>
+                    </button>
+
+
+                    <!-- Menu Items -->
+                    <div class="mt-16 p-4">
+                        <ul class="space-y-4">
+                            <li><a href="#section-about"
+                                    class="text-gray-700 hover:text-gray-900 font-semibold">Info</a>
+                            </li>
+                            <li><a href="#section-projects"
+                                    class="text-gray-700 hover:text-gray-900 font-semibold">Works</a></li>
+                            <li><a href="#section-education"
+                                    class="text-gray-700 hover:text-gray-900 font-semibold">Education</a></li>
+                            <li><a href="#section-contact"
+                                    class="text-gray-700 hover:text-gray-900 font-semibold">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </section>
         </header>
-
 
         <main class="container m-auto">
             <div class="pt-4">
-                <div class="h-auto lg:h-screen px-8">
+                <div class="h-auto lg:h-screen px-8 space-y-4">
                     <!-- Overview -->
                     <section class="grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1 xl:grid-cols-3">
                         <!-- First Section - About Me -->
@@ -261,7 +269,7 @@
                         </div>
 
                         <!-- Second Section - Avatar -->
-                        <div class="col-span-3 xl:col-span-1 p-8 mt-10 hidden xl:block">
+                        <div class="col-span-3 xl:col-span-1 p-8 pb-4 mt-10 hidden xl:block">
                             <div
                                 class="bg-gray-700 bg-opacity-10 border border-[--primary-yellow] me-3 hover:border-cyan-400 hover:border-[--primary-cyan]">
 
@@ -284,7 +292,7 @@
 
                         <!-- Third Section - Contact Information -->
                         <div
-                            class="col-span-3 lg:col-span-1 md:col-span-1 xl:col-span-1 p-8 text-center lg:text-right mt-10">
+                            class="col-span-3 lg:col-span-1 md:col-span-1 xl:col-span-1 p-0 md:p-8 text-center lg:text-right mt-10">
                             <section class="pb-4">
                                 <div class="cyberpunk-mirror">
                                     <p class="uppercase text-white text-end text-lg">
@@ -370,6 +378,7 @@
                         </div>
                     </section>
 
+                    <!-- About -->
                     <section id="section-about" class="head-about h-fit"
                         data-augmented-ui="tl-2-clip-x tr-2-clip-x b-rect-x border">
                         <div class="container flex items-center justify-center h-full relative">
@@ -389,12 +398,12 @@
                                     <div
                                         class="font-['Rajdhani'] tracking-[1.5px] w-full self-center px-4 lg:w-1/2 text-white space-y-5">
                                         <h1 class="text-base font-semibold md:text-3xl">Hello, I am</h1>
-                                        <p class="text-dark block font-bold text-7xl">Theodore Suaking</p>
-                                        <h2 class="font-medium text-xl">A passionate IT professional based in Baguio
+                                        <p class="text-dark block font-bold text-5xl">Theodore Suaking</p>
+                                        <h2 class="font-medium text-lg">A passionate IT professional based in Baguio
                                             City,
                                             Philippines.
                                         </h2>
-                                        <p class="text-lg">
+                                        <p class="text">
                                             I hold a Bachelor's Degree in Information Technology <br>from the University
                                             of
                                             the
@@ -403,7 +412,7 @@
                                             am dedicated to continuously expanding my knowledge and refining my skills
                                             in
                                             these dynamic fields.</br>
-                                        <p class="font-medium text-2xl text-yellow-300">
+                                        <p class="font-medium text-xl text-yellow-300">
                                             Let's build something amazing
                                             together! </p>
                                         </p>
@@ -426,6 +435,7 @@
                         </div>
                     </section>
 
+                    <!-- Works -->
                     <section id="section-projects" class="head-projects h-lvh bg-violet-700 bg-opacity-20"
                         data-augmented-ui="tl-rect-x tr-rect-x border">
                         <div class="container flex items-center justify-center h-full">
@@ -473,6 +483,7 @@
                         </div>
                     </section>
 
+                    <!-- Education -->
                     <section id="section-education" class="head-education h-lvh " data-augmented-ui="b-rect-x border">
                         <div class="container flex items-center justify-center h-full relative">
                             <div class="absolute left-0 top-0 p-12">
@@ -520,6 +531,7 @@
                         </div>
                     </section>
 
+                    <!-- Contact -->
                     <section id="section-contact" class="head-contact h-lvh"
                         data-augmented-ui="tl-2-clip-x tr-2-clip-x b-rect-x border">
                         <div class="container flex items-center justify-center h-full relative">
@@ -556,7 +568,6 @@
                     </footer>
                 </div>
             </div>
-
 
         </main>
 
@@ -599,7 +610,6 @@
             </ul>
         </aside>
 
-
         <button class="fixed bottom-4 right-4 cybr-btn flex justify-end items-end hidden lg:block">
             <span aria-hidden>
                 <svg xmlns="http://www.w3.org/2000/svg" class="p-2.5" width="2em" height="2em" viewBox="0 0 24 24">
@@ -640,73 +650,81 @@
             </div>
         </aside>
 
-
     </div>
 
     <div id="simpleLayout" class="bg-gradient-to-r from-blue-100 to-indigo-100" style="display: none;">
-        <header class="bg-white text-black shadow-md fixed w-full z-50">
-            <nav class="py-2.5">
-                <div class="grid grid-cols-3 max-w-screen-2xl mx-auto">
-                    <!-- Theme Toggle - Right -->
-                    <div class="col-span-1 flex items-center justify-between gap-x-5">
-                        <h1 class="text-lg">「PROJECT: Portfolio」</h1>
+        <header class="text-black shadow-md fixed w-full z-50 bg-white">
+            <nav class="py-2.5 lg:px-14 px-4 mx-4 lg:px-14">
+                <div class="grid md:grid-cols-3 grid-cols-4 max-w-screen-2xl mx-auto">
+                    <!-- Simple Hamburger Button -->
+                    <span class="block xl:hidden">
+                        <button id="hamburger-button-simple" class="p-1 flex items-center justify-center px-10">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                    </span>
+                    <!-- Theme Toggle - Start -->
+                    <div class="col-span-2 md:col-span-1 flex items-center justify-between gap-x-5">
+                        <h1 class="text-lg text-center lg:text-start grow">「PROJECT: Portfolio」</h1>
                         <div class="hidden lg:block">
-                            <div class="hidden lg:block">
-                                <a href="#" class="hover:text-cyan-400">
-                                    <div id="current-time" class="time text-start"></div>
-                                </a>
-                            </div>
+                            <a href="#" class="hover:text-cyan-400">
+                                <div id="current-time" class="time text-start"></div>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Time Section - Left -->
+                    <!-- Time Section - Center -->
                     <div class="col-span-1 flex items-center justify-center">
+                        <button id="scrollToTop"
+                            class="bg-gray-950 bg-opacity-20 border border-[--secondary-yellow] bg-blue-600 text-yellow px-4 py-1 hidden transition-all duration-300 ease-in-out opacity-0 hover:border-cyan-300 hover:text-cyan-300 hover:bg-[#396573]"
+                            aria-label="Scroll to top">
+                            <i class="fa-solid fa-house"></i>
+                        </button>
                         <a href="#" id="simpleMode"
-                            class="flex justify-center gap-20 border border-gray-400 hover:bg-gray-300 px-4 py-1 text-black"
+                            class="flex justify-center text-gray-600 gap-2 hover:text-gray-600 border border-gray-400 hover:border-gray-700 px-4 py-1 hover:bg-gray-200"
                             onclick="toggleLayout()" title="Professional Portfolio">
                             <button class="uppercase font-semibold flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-circle-half-stroke"></i>
-                                <p>Switch Mode</p>
+                                <p class="hidden md:block">Switch Mode</p>
                             </button>
                         </a>
                     </div>
-                    <!-- Navigation Links - Center -->
-                    <div class="col-span-1">
-                        <div class="grid grid-cols-5 text-center">
-                            <li class="list-none pt-1"> <a href="https://github.com/AlterThego" target="_blank"
+                    <!-- Navigation Links - End -->
+                    <div class="col-span-1 hidden xl:block">
+                        <div class="grid grid-cols-5 text-center items-center">
+                            <li class="list-none"> <a href="https://github.com/AlterThego" target="_blank"
                                     title="Github" class="hover:text-gray-900 scroll-link">
                                     <span class="flex items-center justify-center gap-2">
                                         <i class="fa-brands fa-github text-xl"></i>
-                                        <p class="font-medium">Github</p>
+                                        <p class="font-medium hidden 2xl:block">Github</p>
                                     </span>
 
                                 </a>
                             </li>
-                            <li class="list-none pt-1">
+                            <li class="list-none">
                                 <a href="mailto:theosuaking@gmail.com" class="hover:text-gray-900 scroll-link"
                                     title="Email">
                                     <span class="flex items-center justify-center gap-2">
                                         <i class="fa-solid fa-envelope text-xl"></i>
-                                        <p class="font-medium">Email</p>
+                                        <p class="font-medium hidden 2xl:block">Email</p>
                                     </span>
                                 </a>
                             </li>
 
-                            <li class="list-none pt-1">
+                            <li class="list-none">
                                 <a href="https://www.linkedin.com/in/theodore-suaking-30b878333/" target="_blank"
                                     class="hover:text-gray-900 scroll-link" title="LinkedIn">
                                     <span class="flex items-center justify-center gap-2">
                                         <i class="fa-brands fa-linkedin text-xl"></i>
-                                        <p class="font-medium">LinkedIn</p>
+                                        <p class="font-medium hidden 2xl:block">LinkedIn</p>
                                     </span>
                                 </a>
                             </li>
-                            <li class="list-none pt-1">
+                            <li class="list-none">
                                 <a href="https://facebook.com/theosuaking" target="_blank"
                                     class="hover:text-gray-900 scroll-link">
                                     <span class="flex items-center justify-center gap-2">
                                         <i class="fa-brands fa-facebook text-xl"></i>
-                                        <p class="font-medium">Facebook</p>
+                                        <p class="font-medium hidden 2xl:block">Facebook</p>
                                     </span>
                                 </a>
                             </li>
@@ -715,19 +733,55 @@
                                 <li class="list-none text-black bg-gray-200 hover:bg-gray-300 py-1.5 transition duration-300 ease-in-out flex items-center justify-center gap-1 text-md"
                                     title="Download Resume">
                                     <i class="fa-solid fa-download"></i>
-                                    <p class="hidden sm:block uppercase text-center font-semibold">RESUME</p>
+                                    <p class="hidden uppercase text-center font-semibold 2xl:block">RESUME</p>
                                 </li>
                             </a>
                         </div>
                     </div>
                 </div>
             </nav>
+            <!-- Simple Hamburger Content -->
+            <section class="bg-gray-950 block xl:hidden">
+                <div id="menu-simple"
+                    class="fixed top-0 left-0 h-full w-1/3 bg-gray-300 bg-opacity-90 transform -translate-x-full transition-transform duration-300 ease-in-out">
+                    <!-- Close Button -->
+                    <div class="top-0 left-0 bg-gray-400 h-14 shadow"></div>
+                    <button id="close-button-simple" class="absolute top-3 right-4 text-black focus:outline-none">
+                        <i class="fa-solid fa-times text-2xl"></i>
+                    </button>
+
+                    <!-- Menu Items -->
+                    <div class="mt-16 p-4">
+                        <ul class="space-y-4">
+                            <li>
+                                <i class="fa-brands fa-github pr-1"></i>
+                                <a href="#https://github.com/AlterThego"
+                                    class="text-gray-700 hover:text-gray-900 font-semibold">Github</a>
+                            </li>
+                            <li> <i class="fa-solid fa-envelope pr-1"></i>
+                                <a href="mailto:theosuaking@gmail.com"
+                                    class="text-gray-700 hover:text-gray-900 font-semibold">Email</a>
+                            </li>
+                            <li> <i class="fa-brands fa-linkedin pr-1"></i>
+                                <a href="https://www.linkedin.com/in/theodore-suaking-30b878333/"
+                                    class="text-gray-700 hover:text-gray-900 font-semibold">LinkedIn</a>
+                            </li>
+                            <li><i class="fa-brands fa-facebook pr-1"></i>
+                                <a href="https://www.facebook.com/TheoSuaking"
+                                    class="text-gray-700 hover:text-gray-900 font-semibold">Facebook</a>
+                            </li>
+                            <li> <i class="fa-solid fa-download pr-1"></i>
+                                <a href="assets/documents/Updated Resume.docx"
+                                    class="text-gray-700 hover:text-gray-900 font-semibold">Resume</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </header>
 
-
-
         <!-- Main Content -->
-        <div class="py-28">
+        <div class="py-20">
             <div class="flex items-center justify-center">
                 <div
                     class="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-lg h-full w-full rounded-md bg-clip-padding backdrop-blur-sm bg-opacity-60 border border-gray-100">
@@ -737,39 +791,45 @@
                             <!-- Profile Section -->
                             <div class="text-center mb-6">
                                 <h1 class="text-3xl font-bold text-gray-800">Theodore Suaking</h1>
-                                <p class="text-lg text-gray-600">Bachelor of Science in Information Technology
+                                <p class="text-lg text-gray-700">Bachelor of Science in Information Technology
                                 </p>
-                                <p class="text-gray-500 mt-2">theosuaking@gmail.com | 0951-5421-008</p>
-                                <p class="text-gray-500 mt-2">Philippines, Baguio City, 2600</p>
+                                <p class="text-gray-600 mt-2">theosuaking@gmail.com | 0951-5421-008</p>
+                                <p class="text-gray-600 mt-2">Philippines, Baguio City, 2600</p>
                             </div>
 
                             <!-- Skills Section -->
                             <section class="mb-8">
-                                <h2 class="text-xl font-semibold text-gray-700 mb-4">Skills</h2>
+                                <h2 class="text-xl font-semibold text-gray-800 mb-4">Skills</h2>
                                 <ul class="list-disc pl-5 space-y-2 text-gray-600">
                                     <li>Basic SAP ABAP Programming</li>
-                                    <li>Web Development</li>
+                                    <li>Front and Backend Web Development</li>
                                     <li>Responsive Web Design</li>
                                 </ul>
                             </section>
 
                             <!-- Education Section -->
                             <section class="mb-8">
-                                <h2 class="text-xl font-semibold text-gray-700 mb-4">Education</h2>
-                                <p class="font-bold text-gray-800">Bachelor of Science in Information Technology</p>
-                                <p class="text-gray-600">University of the Cordilleras - 2021 to 2024</p>
+                                <h2 class="text-xl font-semibold text-gray-800 mb-4">Education</h2>
+                                <p class="font-bold text-gray-900">Bachelor of Science in Information Technology</p>
+                                <p class="text-gray-700">University of the Cordilleras - 2021 to 2024</p>
                             </section>
 
                             <!-- Languages -->
                             <section class="mb-8">
-                                <h2 class="text-xl font-semibold text-gray-700 mb-4">Languages</h2>
-                                <p class="text-gray-600">English (Intermediate), Filipino (Fluent)</p>
+                                <h2 class="text-xl font-semibold text-gray-800 mb-4">Languages</h2>
+                                <p class="text-gray-700">English (Intermediate), Filipino (Fluent)</p>
                             </section>
 
                             <!-- Programming Languages -->
+                            <section class="mb-8">
+                                <h2 class="text-xl font-semibold text-gray-800 mb-4">Programming Languages</h2>
+                                <p class="text-gray-700">PHP, Javascript, Python</p>
+                            </section>
+
+                            <!-- Frameworks -->
                             <section>
-                                <h2 class="text-xl font-semibold text-gray-700 mb-4">Programming Languages</h2>
-                                <p class="text-gray-600">PHP, Javascript</p>
+                                <h2 class="text-xl font-semibold text-gray-800 mb-4">Frameworks</h2>
+                                <p class="text-gray-700">Laravel, Django, Tailwindcss, Bootstrap, HTML</p>
                             </section>
                         </div>
 
@@ -777,8 +837,8 @@
                         <div class="col-span-1 md:col-span-2">
                             <!-- Summary Section -->
                             <section class="mb-8">
-                                <h2 class="text-xl font-semibold text-gray-700 mb-4">Profile</h2>
-                                <p class="text-gray-600">
+                                <h2 class="text-xl font-semibold text-gray-800 mb-4">Profile</h2>
+                                <p class="text-gray-700">
                                     I hold a Bachelor's Degree in Information Technology from the University of the
                                     Cordilleras. With a strong focus on web development and SAP ABAP programming, I am
                                     dedicated to continuously expanding my knowledge and refining my skills in these
@@ -788,13 +848,14 @@
 
                             <!-- Experience Section -->
                             <section class="mb-8">
-                                <h2 class="text-xl font-semibold text-gray-700 mb-4">Experience</h2>
+                                <h2 class="text-xl font-semibold text-gray-800 mb-4">Experience</h2>
 
                                 <div>
-                                    <h3 class="font-bold text-gray-800">Lead Developer, Capstone Project</h3>
-                                    <p class="text-gray-600">Project: ECOMETRICS - Socio-Economic Profile and Inventory
+                                    <h3 class="font-bold text-gray-900">CAPSTONE PROJECT | ECOMETRICS | LARAVEL, PHP,
+                                        TAILWINDCSS</h3>
+                                    <p class="text-gray-700">ECOMETRICS - Socio-Economic Profile and Inventory
                                         System for the Benguet Provincial Veterinary Office</p>
-                                    <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                                    <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-700">
                                         <li>Technologies used: Laravel, Tailwind CSS</li>
                                         <li>Key Features of EcoMetrics:
                                             <ul class="list-inside pl-4 mt-2">
@@ -806,22 +867,29 @@
                                                 <li>6. Efficient User and Data Management</li>
                                             </ul>
                                         </li>
-                                        <li>Developed and tested prototypes to enhance user experience and interface
-                                            design.
+                                        <li>Led the full-stack development using Laravel PHP framework, implementing
+                                            secure user authentication, data management, and visualization features.
                                         </li>
-                                        <li>Collaborated with stakeholders to gather feedback and iteratively
-                                            improve design solutions.</li>
+                                        <li>Designed automatic reporting tools that enhanced BPVO's data-driven
+                                            decision-making capabilities. (PHPWord, PHPSpreadsheet).</li>
+                                        <li>Created an efficient and scalable inventory management system that improved
+                                            tracking of animal-based resources across the province (MySQL).</li>
+                                        <li>Integrated data visualization tools to analyze socio-economic trends and
+                                            generate actionable insights utilizing (Larapex).</li>
                                     </ul>
                                 </div>
 
                                 <div class="mt-4">
-                                    <h3 class="font-bold text-gray-800">SAP ABAP Programmer</h3>
-                                    <p class="text-gray-600">Company: Accenture</p>
-                                    <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
-                                        <li>Achieved 2nd place in a case study competition by delivering an innovative
-                                            solution.</li>
-                                        <li>Successfully completed all required SAP learning modules, gaining in-depth
-                                            knowledge of ABAP programming.</li>
+                                    <h3 class="font-bold text-gray-800">TRAINING AND INTERNSHIP</h3>
+                                    <p class="text-gray-700">ACCENTURE TECHNOLOGY ACADEMY - SAP ABAP DEVELOPMENT INTERN
+                                    </p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                                        <li>Achieved 2nd place ranking among interns in the program.</li>
+                                        <li>Mastered core SAP ABAP programming concepts and best practices.</li>
+                                        <li>Successfully completed comprehensive technical assessment and case study.
+                                        </li>
+                                        <li>Developed practical solutions using SAP ABAP programming tools and
+                                        <li>Collaborated with team members on real-world business scenarios and problem-solving.</li>
                                     </ul>
                                 </div>
 
@@ -833,80 +901,14 @@
             </div>
         </div>
 
-
-
     </div>
-
 
     <script src="script.js"></script>
     <script src="assets/js/chatbot-script.js"></script>
     <script src="assets/js/header-script.js"></script>
     <script src="assets/js/overview-script.js"></script>
-    <script src="assets/js/section-3-script.js"></script>
     <script src="assets/js/about-me-script.js"></script>
-
-    <script>
-        const scrollToTopButton = document.getElementById('scrollToTop');
-        const simpleModeButton = document.getElementById('simpleMode');
-
-        let isScrolling = false;
-
-        window.addEventListener('scroll', () => {
-            if (!isScrolling) {
-                window.requestAnimationFrame(() => {
-                    if (window.scrollY > 200) {
-                        // Show scroll to top, hide simple mode
-                        if (scrollToTopButton.classList.contains('hidden')) {
-                            simpleModeButton.style.opacity = '0';
-                            setTimeout(() => {
-                                simpleModeButton.classList.add('hidden');
-                                scrollToTopButton.classList.remove('hidden');
-                                requestAnimationFrame(() => {
-                                    scrollToTopButton.classList.remove('opacity-0');
-                                });
-                            }, 0);
-                        }
-                    } else {
-                        // Show simple mode, hide scroll to top
-                        if (!scrollToTopButton.classList.contains('hidden')) {
-                            scrollToTopButton.classList.add('opacity-0');
-                            setTimeout(() => {
-                                scrollToTopButton.classList.add('hidden');
-                                simpleModeButton.classList.remove('hidden');
-                                requestAnimationFrame(() => {
-                                    simpleModeButton.style.opacity = '1';
-                                });
-                            }, 0);
-                        }
-                    }
-                    isScrolling = false;
-                });
-            }
-            isScrolling = true;
-        });
-
-        scrollToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-
-    <script>
-        // Toggle menu visibility
-        const hamburgerButton = document.getElementById('hamburger-button');
-        const closeButton = document.getElementById('close-button');
-        const menu = document.getElementById('menu');
-
-        hamburgerButton.addEventListener('click', () => {
-            menu.classList.toggle('-translate-x-full');
-        });
-
-        closeButton.addEventListener('click', () => {
-            menu.classList.add('-translate-x-full');
-        });
-    </script>
+    <script src="assets/js/dynamic-switch-script.js"></script>
 </body>
 
 <body>
