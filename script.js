@@ -68,29 +68,29 @@ function smoothScroll(targetElement, duration = 1000) {
     requestAnimationFrame(animation);
 }
 
-// Select only navigation section links
-const navLinks = document.querySelectorAll('header a[href^="#section-"]');
+// // Select only navigation section links
+// const navLinks = document.querySelectorAll('header a[href^="#section-"]');
 
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = e.currentTarget.getAttribute('href');
+// navLinks.forEach(link => {
+//     link.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         const targetId = e.currentTarget.getAttribute('href');
 
-        // Only proceed if it's a section link
-        if (targetId && targetId.startsWith('#section-')) {
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                smoothScroll(targetElement);
-            }
-        }
-    });
-});
+//         // Only proceed if it's a section link
+//         if (targetId && targetId.startsWith('#section-')) {
+//             const targetElement = document.querySelector(targetId);
+//             if (targetElement) {
+//                 smoothScroll(targetElement);
+//             }
+//         }
+//     });
+// });
 
-// Separate handler for the Overview button (if needed)
-const overviewButton = document.querySelector('nav a[href="#"]');
-if (overviewButton) {
-    overviewButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        smoothScroll(document.body);
-    });
-}
+// // Separate handler for the Overview button (if needed)
+// const overviewButton = document.querySelector('nav a[href="#"]');
+// if (overviewButton) {
+//     overviewButton.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         smoothScroll(document.body);
+//     });
+// }
